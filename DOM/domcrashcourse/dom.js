@@ -54,3 +54,21 @@ header.style.borderBottom = 'solid 4px #ccc';
 
 let input = document.querySelector('input');
 input.value = 'Hello World';
+
+let submitButton = document.querySelector('input[type="submit"]');
+submitButton.value = 'send';
+
+let item = document.querySelector('.list-group-item');
+item.style.color = 'red';
+
+let lastItem = document.querySelector('.list-group-item:last-child');
+lastItem.style.color = 'blue';
+
+// QuerySelectorAll
+let titles = document.querySelectorAll('.title');
+console.log(titles);
+
+var odd = document.querySelectorAll('li:nth-child(odd)');
+for (let i = 0; i < odd.length; i++) {
+  odd[i].style.backgroundColor = 'lightgrey';
+}
