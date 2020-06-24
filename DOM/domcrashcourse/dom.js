@@ -38,12 +38,19 @@ headerTitle.style.color = '#000';
 // }
 
 // Get Elements by TagName
-let listItems = document.getElementsByTagName('li');
-console.log(listItems[1].textContent);
-listItems[1].textContent = 'New Item';
-listItems[1].style.fontWeight = 'bold';
-listItems[1].style.backgroundColor = 'yellow';
+// let listItems = document.getElementsByTagName('li');
+// console.log(listItems[1].textContent);
+// listItems[1].textContent = 'New Item';
+// listItems[1].style.fontWeight = 'bold';
+// listItems[1].style.backgroundColor = 'yellow';
 
-for (let i = 0; i < listItems.length; i++) {
-  listItems[i].style.backgroundColor = 'lightgrey';
-}
+// for (let i = 0; i < listItems.length; i++) {
+//   listItems[i].style.backgroundColor = 'lightgrey';
+// }
+
+// QuerySelector
+let header = document.querySelector('#main-header');
+header.style.borderBottom = 'solid 4px #ccc';
+
+let input = document.querySelector('input');
+input.value = 'Hello World';
