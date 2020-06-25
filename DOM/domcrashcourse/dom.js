@@ -99,16 +99,24 @@ let itemList = document.querySelector('#items');
 // console.log(titleNode[1].nextElementSibling);
 
 // createElement
-let newDiv = document.createElement('div');
-newDiv.className = 'hello';
-newDiv.textContent = 'yoyoma';
-console.log(newDiv);
+// let newDiv = document.createElement('div');
+// newDiv.className = 'hello';
+// newDiv.textContent = 'yoyoma';
+// console.log(newDiv);
 
-// This is the best way to create DOM
-// - https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML
+// // This is the best way to create DOM
+// // - https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML
 
-// Inserting to DOM
-let container = document.querySelector('header .container');
-let h1 = document.querySelector('header h1');
+// // Inserting to DOM
+// let container = document.querySelector('header .container');
+// let h1 = document.querySelector('header h1');
 
-container.insertBefore(newDiv, h1);
+// container.insertBefore(newDiv, h1);
+document.getElementById('button').addEventListener('click', function (e) {
+  console.log(e.target.className);
+  console.log(e.target.classList);
+  console.log(e.type);
+  console.log(e.clientX);
+
+  console.log('offset', e.offsetX);
+});
