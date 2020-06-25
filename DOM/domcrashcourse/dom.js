@@ -49,26 +49,66 @@ headerTitle.style.color = '#000';
 // }
 
 // QuerySelector
-let header = document.querySelector('#main-header');
-header.style.borderBottom = 'solid 4px #ccc';
+// let header = document.querySelector('#main-header');
+// header.style.borderBottom = 'solid 4px #ccc';
 
-let input = document.querySelector('input');
-input.value = 'Hello World';
+// let input = document.querySelector('input');
+// input.value = 'Hello World';
 
-let submitButton = document.querySelector('input[type="submit"]');
-submitButton.value = 'send';
+// let submitButton = document.querySelector('input[type="submit"]');
+// submitButton.value = 'send';
 
-let item = document.querySelector('.list-group-item');
-item.style.color = 'red';
+// let item = document.querySelector('.list-group-item');
+// item.style.color = 'red';
 
-let lastItem = document.querySelector('.list-group-item:last-child');
-lastItem.style.color = 'blue';
+// let lastItem = document.querySelector('.list-group-item:last-child');
+// lastItem.style.color = 'blue';
 
-// QuerySelectorAll
-let titles = document.querySelectorAll('.title');
-console.log(titles);
+// // QuerySelectorAll
+// let titles = document.querySelectorAll('.title');
+// console.log(titles);
 
-var odd = document.querySelectorAll('li:nth-child(odd)');
-for (let i = 0; i < odd.length; i++) {
-  odd[i].style.backgroundColor = 'lightgrey';
-}
+// var odd = document.querySelectorAll('li:nth-child(odd)');
+// for (let i = 0; i < odd.length; i++) {
+//   odd[i].style.backgroundColor = 'lightgrey';
+// }
+
+// Traversing the DOM
+let itemList = document.querySelector('#items');
+// console.log(itemList.parentNode);
+// itemList.parentNode.style.backgroundColor = '#ccc';
+
+// console.log(itemList.parentElement);
+// itemList.parentElement.style.backgroundColor = '#ccc';
+
+// ChildNodes
+// console.log(itemList.childNodes);
+
+// Children
+// console.log(itemList.children);
+// itemList.children[1].style.backgroundColor = 'yellow';
+
+// lastChild
+// console.log(itemList.lastChild);
+// // lastElementChild
+// console.log(itemList.lastElementChild);
+
+// Siblings
+// let titleNode = document.getElementsByClassName('title');
+// console.log(titleNode);
+// console.log(titleNode[1].nextElementSibling);
+
+// createElement
+let newDiv = document.createElement('div');
+newDiv.className = 'hello';
+newDiv.textContent = 'yoyoma';
+console.log(newDiv);
+
+// This is the best way to create DOM
+// - https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML
+
+// Inserting to DOM
+let container = document.querySelector('header .container');
+let h1 = document.querySelector('header h1');
+
+container.insertBefore(newDiv, h1);
