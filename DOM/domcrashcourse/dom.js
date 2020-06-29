@@ -112,11 +112,22 @@ let itemList = document.querySelector('#items');
 // let h1 = document.querySelector('header h1');
 
 // container.insertBefore(newDiv, h1);
-document.getElementById('button').addEventListener('click', function (e) {
-  console.log(e.target.className);
-  console.log(e.target.classList);
-  console.log(e.type);
-  console.log(e.clientX);
+// document.getElementById('button').addEventListener('click', function (e) {
+//   console.log(e.target.className);
+//   console.log(e.target.classList);
+//   console.log(e.type);
+//   console.log(e.clientX);
 
-  console.log('offset', e.offsetX);
-});
+//   console.log('offset', e.offsetX);
+// });
+
+let button = document
+  .getElementById('button')
+  .addEventListener('mouseup', runEvent);
+
+let box = document.getElementById('box');
+box.addEventListener('mouseenter', runEvent);
+
+function runEvent(e) {
+  console.log('Event Type: ' + e.type);
+}
